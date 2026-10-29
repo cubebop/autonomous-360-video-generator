@@ -1,0 +1,2 @@
+MIDIUtil==1.2.1
+mingus==0.6.1

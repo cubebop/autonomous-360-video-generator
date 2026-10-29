@@ -1,0 +1,85 @@
+{
+  "id": "renderer-smoke-test",
+  "title": "Renderer Smoke Test",
+  "description": "A short primitive-only scene for validating the video exporter.",
+  "environment": {
+    "type": "space-box",
+    "size": [36, 20, 36],
+    "color": "#040712",
+    "starColor": "#d8ecff",
+    "starCount": 450
+  },
+  "camera": {
+    "position": [0, 0, 18],
+    "lookAt": [0, 0, 0],
+    "fov": 50
+  },
+  "render": {
+    "background": "#02040a",
+    "ambientLight": 0.9,
+    "directionalLight": 1.3
+  },
+  "export": {
+    "fps": 12,
+    "width": 1280,
+    "height": 640,
+    "durationSeconds": 2,
+    "outputName": "renderer-smoke-test.mp4"
+  },
+  "entities": [
+    {
+      "id": "asteroid-1",
+      "asset": {
+        "kind": "model",
+        "path": "/assets/asteroids/asteroid-1.glb",
+        "scale": [1.4, 1.4, 1.4],
+        "fallback": {
+          "primitive": "sphere",
+          "color": "#8a7f7b"
+        }
+      },
+      "position": [-8, 1, 0],
+      "physics": {
+        "type": "collision",
+        "velocity": [1.5, 0.5, 0.8],
+        "radius": 1.5,
+        "bounds": [13, 7, 9],
+        "spin": [0.5, 0.3, 0.2]
+      }
+    },
+    {
+      "id": "asteroid-2",
+      "asset": {
+        "kind": "primitive",
+        "primitive": "sphere",
+        "color": "#c19b73",
+        "scale": [1.8, 1.2, 1.4]
+      },
+      "position": [6, -2, 1],
+      "physics": {
+        "type": "collision",
+        "velocity": [-1.1, 0.8, -0.6],
+        "radius": 1.35,
+        "bounds": [13, 7, 9],
+        "spin": [0.2, -0.4, 0.35]
+      }
+    },
+    {
+      "id": "asteroid-3",
+      "asset": {
+        "kind": "primitive",
+        "primitive": "sphere",
+        "color": "#8f8f92",
+        "scale": [1.2, 1.6, 1.25]
+      },
+      "position": [1, 3, -4],
+      "physics": {
+        "type": "collision",
+        "velocity": [0.9, -1, 0.7],
+        "radius": 1.25,
+        "bounds": [13, 7, 9],
+        "spin": [0.35, 0.22, -0.3]
+      }
+    }
+  ]
+}
