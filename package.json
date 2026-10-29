@@ -1,0 +1,21 @@
+{
+  "name": "autonomous-360-video-generator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "export:scene": "node scripts/export-scene.mjs"
+  },
+  "dependencies": {
+    "three": "^0.176.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.176.0",
+    "puppeteer": "^24.7.2",
+    "typescript": "^5.8.3",
+    "vite": "^5.4.18"
+  }
+}
